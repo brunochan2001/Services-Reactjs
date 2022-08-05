@@ -1,0 +1,8 @@
+.form-container {
+  position: relative;
+}
+.form {
+  width: 18rem;
+  position: absolute;
+  right: 0;
+}

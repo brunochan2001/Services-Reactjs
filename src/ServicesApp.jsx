@@ -1,13 +1,14 @@
 import React from 'react';
 import { CardGrid } from './components/Card/CardGrid';
+import Form from './components/Form';
 import Navigation from './components/Navigation';
 const ServicesApp = () => {
   return (
     <>
       <Navigation></Navigation>
-      <main className="w-75 mx-auto d-flex">
+      <main className="w-75 mx-auto d-flex  py-4">
         <CardGrid />
-        <div className="w-25"></div>
+        <Form></Form>
       </main>
     </>
   );
