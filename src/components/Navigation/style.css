@@ -1,0 +1,9 @@
+.nav-title {
+  text-align: center;
+  margin: 0;
+}
+.nav-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
