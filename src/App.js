@@ -1,7 +1,12 @@
 import React from 'react';
+import ServicesApp from './ServicesApp';
 
 const App = () => {
-  return <h1>Servicios</h1>;
+  return (
+    <>
+      <ServicesApp></ServicesApp>
+    </>
+  );
 };
 
 export default App;
