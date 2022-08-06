@@ -1,1 +1,1 @@
-export { deleteService } from './serviceAction';
+export { deleteService, addService } from './serviceAction';
