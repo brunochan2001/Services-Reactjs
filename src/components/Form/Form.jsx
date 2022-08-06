@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
 import './style.css';
+import { addService } from '../../store/actions';
 
 const initialForm = {
-  name: '',
+  title: '',
   description: '',
   id: null,
   type: ''
 };
 
 const Form = () => {
+  const dispatch = useDispatch();
   const [form, setForm] = useState(initialForm);
 
   const handleChange = e => {
@@ -21,9 +25,13 @@ const Form = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (!form.name || !form.description || !form.type) {
+    if (!form.title || !form.description || !form.type) {
       alert('Datos incompletos');
+      return;
     }
+    form.id = uuidv4();
+    dispatch(addService(form));
+    handleReset();
   };
 
   return (
@@ -39,8 +47,8 @@ const Form = () => {
               id="exampleFormControlInput1"
               placeholder="Nombre"
               onChange={handleChange}
-              name="name"
-              value={form.name}
+              name="title"
+              value={form.title}
             />
           </div>
           <div className="mb-3">
@@ -60,6 +68,7 @@ const Form = () => {
             aria-label="Default select example"
             onChange={handleChange}
             name="type"
+            value={form.type}
           >
             <option value="">Tipos</option>
             <option value="Auto">Autos</option>
