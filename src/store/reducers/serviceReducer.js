@@ -6,9 +6,13 @@ const initialState = {
 };
 
 const serviceReducer = (state = initialState, action) => {
+  const { payload } = action;
   switch (action.type) {
     case DELETE_SERVICE:
-      return state;
+      return {
+        ...state,
+        data: payload
+      };
     case EDIT_SERVICE:
       return state;
     case ADD_SERVICE:
