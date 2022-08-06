@@ -1,15 +1,7 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteService } from '../../store/actions';
 
-const CardItem = ({ service }) => {
-  const dispatch = useDispatch();
-  const { data } = useSelector(state => state.service);
+const CardItem = ({ service, deleteService }) => {
   const { title, description, id } = service;
-
-  const deleteServiceId = (id, data) => {
-    dispatch(deleteService(id, data));
-  };
 
   return (
     <div className="card" style={{ width: '18rem' }}>
@@ -19,7 +11,7 @@ const CardItem = ({ service }) => {
       </div>
       <div className="card-footer">
         <a className="card-link">Editar</a>
-        <a className="card-link" onClick={() => deleteServiceId(id, data)}>
+        <a className="card-link" onClick={() => deleteService(id)}>
           Eliminar
         </a>
       </div>
