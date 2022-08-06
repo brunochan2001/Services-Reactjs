@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardItem = ({ service, deleteService }) => {
+const CardItem = ({ service, deleteService, editService }) => {
   const { title, description, id } = service;
 
   return (
@@ -10,7 +10,9 @@ const CardItem = ({ service, deleteService }) => {
         <p className="card-text">{description}</p>
       </div>
       <div className="card-footer">
-        <a className="card-link">Editar</a>
+        <a className="card-link" onClick={() => editService(service)}>
+          Editar
+        </a>
         <a className="card-link" onClick={() => deleteService(id)}>
           Eliminar
         </a>
