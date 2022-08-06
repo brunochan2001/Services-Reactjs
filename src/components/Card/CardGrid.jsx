@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import CardItem from './CardItem';
-import servicesdata from '../../data/servicesData';
+import { useSelector } from 'react-redux';
+
 export const CardGrid = () => {
+  const { data } = useSelector(state => state.service);
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    setServices(servicesdata);
-  }, []);
+    setServices(data);
+  }, [data]);
 
   return (
     <>
