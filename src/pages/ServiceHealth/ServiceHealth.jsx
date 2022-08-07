@@ -27,7 +27,7 @@ const ServiceHealth = () => {
   }, []);
 
   useEffect(() => {
-    const serviceHome = data.filter(e => e.type === 'Auto');
+    const serviceHome = data.filter(e => e.type === 'Salud');
     setServices(serviceHome);
   }, [data]);
 
