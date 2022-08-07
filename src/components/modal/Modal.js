@@ -53,7 +53,6 @@ const ModalEditService = ({
     editServiceSelect(form);
     setOpen(false);
   };
-  console.log(form);
   return (
     <div>
       <Modal
@@ -61,7 +60,6 @@ const ModalEditService = ({
         aria-describedby="transition-modal-description"
         open={open}
         onClose={() => setOpen(false)}
-        closeAfterTransition
         BackdropComponent={Backdrop}
       >
         <Fade in={open}>

@@ -12,7 +12,6 @@ import './index.css';
 
 const CardItem = ({ service, deleteService, editService }) => {
   const { title, description, id } = service;
-  console.log(id);
 
   return (
     <>
