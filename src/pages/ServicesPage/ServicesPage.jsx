@@ -4,10 +4,16 @@ import CardGrid from '../../components/Card/CardGrid';
 import Form from '../../components/Form';
 import ModalEditService from '../../components/modal/Modal';
 import Navigation from '../../components/Navigation';
-import { deleteService, editService } from '../../store/actions';
+import {
+  deleteService,
+  editService,
+  getServicesLoading,
+  getServicessuccess
+} from '../../store/actions';
 import { Grid } from '@material-ui/core';
 import './index.css';
 import Swal from 'sweetalert2';
+import Spin from '../../components/Spin';
 
 const ServicesPage = () => {
   const dispatch = useDispatch();
@@ -17,9 +23,15 @@ const ServicesPage = () => {
   const [serviceSelect, setServiceSelect] = useState([]);
 
   useEffect(() => {
+    dispatch(getServicesLoading());
+    setTimeout(() => {
+      dispatch(getServicessuccess());
+    }, 500);
+  }, []);
+
+  useEffect(() => {
     setServices(data);
   }, [data]);
-  console.log(loading);
 
   const deleteServiceId = id => {
     Swal.fire({
@@ -50,20 +62,26 @@ const ServicesPage = () => {
   return (
     <>
       <Navigation></Navigation>
-      <main className="main">
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={12} md={7} lg={8}>
-            <CardGrid
-              services={services}
-              deleteService={deleteServiceId}
-              editService={openModal}
-            />
-          </Grid>
-          <Grid item xs={12} md={5} lg={4}>
-            <Form></Form>
-          </Grid>
-        </Grid>
-      </main>
+      {loading ? (
+        <Spin></Spin>
+      ) : (
+        <>
+          <main className="main">
+            <Grid container spacing={4}>
+              <Grid item xs={12} sm={12} md={7} lg={8}>
+                <CardGrid
+                  services={services}
+                  deleteService={deleteServiceId}
+                  editService={openModal}
+                />
+              </Grid>
+              <Grid item xs={12} md={5} lg={4}>
+                <Form></Form>
+              </Grid>
+            </Grid>
+          </main>
+        </>
+      )}
       <ModalEditService
         open={open}
         setOpen={setOpen}

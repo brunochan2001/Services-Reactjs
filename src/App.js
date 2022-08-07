@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ServiceAuto, ServiceHealth, ServiceHome, ServicesPage } from './pages';
 import store from './store';
+import './index.css';
 
 const App = () => {
   return (

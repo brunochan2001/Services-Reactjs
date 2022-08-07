@@ -2,7 +2,8 @@ import {
   ADD_SERVICE,
   DELETE_SERVICE,
   EDIT_SERVICE,
-  GET_SERVICE_LOADING
+  GET_SERVICE_LOADING,
+  GET_SERVICE_SUCCESS
 } from '../actionTypes';
 
 export const deleteService = (id, data) => {
@@ -21,4 +22,6 @@ export const getServicesLoading = () => {
   return { type: GET_SERVICE_LOADING };
 };
 
-export const getServicessuccess = () => {};
+export const getServicessuccess = () => {
+  return { type: GET_SERVICE_SUCCESS };
+};

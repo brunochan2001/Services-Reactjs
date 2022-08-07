@@ -1,1 +1,7 @@
-export { deleteService, addService, editService } from './serviceAction';
+export {
+  deleteService,
+  addService,
+  editService,
+  getServicesLoading,
+  getServicessuccess
+} from './serviceAction';
