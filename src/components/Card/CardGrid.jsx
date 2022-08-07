@@ -9,7 +9,7 @@ const CardGrid = ({ services, deleteService, editService }) => {
       <div className="card-grid-container">
         <Grid container spacing={4} justify="flex-start">
           {services.map((service, index) => (
-            <Grid item xs={12} sm={12} md={6} lg={3} key={index}>
+            <Grid item xs={12} sm={6} md={6} lg={4} xl={3} key={index}>
               <CardItem
                 className="card-item"
                 service={service}

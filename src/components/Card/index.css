@@ -26,11 +26,3 @@
   border: none;
   height: 1px;
 }
-@media (min-width: 576px) {
-  .cardgrid {
-    flex-direction: row;
-  }
-  .card {
-    min-height: 250px;
-  }
-}

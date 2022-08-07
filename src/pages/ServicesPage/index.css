@@ -1,17 +1,5 @@
 .main {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column-reverse;
-  align-items: center;
-  padding: 2rem 4rem;
-  font-size: 14px;
+  padding: 2rem 3rem;
   max-width: 1550px;
   margin: auto;
-}
-@media (min-width: 576px) {
-  .main {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 2rem;
-  }
 }
