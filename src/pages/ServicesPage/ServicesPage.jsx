@@ -7,20 +7,35 @@ import Navigation from '../../components/Navigation';
 import { deleteService, editService } from '../../store/actions';
 import { Grid } from '@material-ui/core';
 import './index.css';
+import Swal from 'sweetalert2';
 
 const ServicesPage = () => {
   const dispatch = useDispatch();
   const [services, setServices] = useState([]);
-  const { data } = useSelector(state => state.service);
+  const { data, loading } = useSelector(state => state.service);
   const [open, setOpen] = useState(false);
   const [serviceSelect, setServiceSelect] = useState([]);
 
   useEffect(() => {
     setServices(data);
   }, [data]);
+  console.log(loading);
 
   const deleteServiceId = id => {
-    dispatch(deleteService(id, data));
+    Swal.fire({
+      title: '¿Estas Seguro de Eliminar este Servicio?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then(result => {
+      if (result.isConfirmed) {
+        Swal.fire('Servicio Eliminado', '', 'success');
+        dispatch(deleteService(id, data));
+      }
+    });
   };
 
   const openModal = service => {

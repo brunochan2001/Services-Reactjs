@@ -17,6 +17,7 @@ import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
+import Swal from 'sweetalert2';
 
 const initialForm = {
   title: '',
@@ -40,12 +41,25 @@ const Form = () => {
   const handleSubmit = e => {
     e.preventDefault();
     if (!form.title || !form.description || !form.type) {
-      alert('Datos incompletos');
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Complete todos los datos',
+        showConfirmButton: false,
+        timer: 1000
+      });
       return;
     }
     form.id = uuidv4();
     dispatch(addService(form));
     handleReset();
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Servicio Agregado',
+      showConfirmButton: false,
+      timer: 1000
+    });
   };
 
   return (

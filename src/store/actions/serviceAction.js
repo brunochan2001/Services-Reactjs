@@ -1,4 +1,9 @@
-import { ADD_SERVICE, DELETE_SERVICE, EDIT_SERVICE } from '../actionTypes';
+import {
+  ADD_SERVICE,
+  DELETE_SERVICE,
+  EDIT_SERVICE,
+  GET_SERVICE_LOADING
+} from '../actionTypes';
 
 export const deleteService = (id, data) => {
   const service = data.filter(e => e.id !== id);
@@ -11,3 +16,9 @@ export const editService = (service, data) => {
   const newData = data.map(el => (el.id === service.id ? service : el));
   return { type: EDIT_SERVICE, payload: newData };
 };
+
+export const getServicesLoading = () => {
+  return { type: GET_SERVICE_LOADING };
+};
+
+export const getServicessuccess = () => {};
