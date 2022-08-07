@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+
 import './index.css';
 
 const CardItem = ({ service, deleteService, editService }) => {
@@ -32,15 +33,20 @@ const CardItem = ({ service, deleteService, editService }) => {
           </Typography>
           <Divider className="card-divider" light />
           <Stack direction="row" spacing={1}>
-            <IconButton aria-label="delete" onClick={() => deleteService(id)}>
-              <DeleteIcon />
-            </IconButton>
-            <IconButton
-              aria-label="delete"
+            <Button
+              variant="outlined"
+              startIcon={<EditIcon />}
               onClick={() => editService(service)}
             >
-              <EditIcon />
-            </IconButton>
+              Editar
+            </Button>
+            <Button
+              variant="outlined"
+              startIcon={<DeleteIcon />}
+              onClick={() => deleteService(id)}
+            >
+              Eliminar
+            </Button>
           </Stack>
         </CardContent>
       </Card>

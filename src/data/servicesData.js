@@ -2,34 +2,34 @@ const servicesdata = [
   {
     title: '1',
     id: 1,
-    type: 'auto',
+    type: 'Auto',
     description:
       'Luz es una radiación electromagnética y generalmente nos referimos a la que nos es visible. La luz se transmite en forma de ondas cuyo reflejo ilumina las superficies permitiéndonos, de esta manera, ver los objetos y los colores a nuestro alrededor.'
   },
   {
     title: '2',
     id: 2,
-    type: 'auto',
+    type: 'Auto',
     description:
       'Luz es una radiación electromagnética y generalmente nos referimos a la que nos es visible. La luz se transmite en forma de ondas cuyo reflejo ilumina las superficies permitiéndonos, de esta manera, ver los objetos y los colores a nuestro alrededor.'
   },
   {
     title: '3',
-    type: 'auto',
+    type: 'Auto',
     id: 3,
     description:
       'Luz es una radiación electromagnética y generalmente nos referimos a la que nos es visible. La luz se transmite en forma de ondas cuyo reflejo ilumina las superficies permitiéndonos, de esta manera, ver los objetos y los colores a nuestro alrededor.'
   },
   {
     title: '4',
-    type: 'salud',
+    type: 'Salud',
     id: 4,
     description:
       'Luz es una radiación electromagnética y generalmente nos referimos a la que nos es visible. La luz se transmite en forma de ondas cuyo reflejo ilumina las superficies permitiéndonos, de esta manera, ver los objetos y los colores a nuestro alrededor.'
   },
   {
     title: '5',
-    type: 'salud',
+    type: 'Salud',
     id: 5,
     description:
       'Luz es una radiación electromagnética y generalmente nos referimos a la que nos es visible. La luz se transmite en forma de ondas cuyo reflejo ilumina las superficies permitiéndonos, de esta manera, ver los objetos y los colores a nuestro alrededor.'

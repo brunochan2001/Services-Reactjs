@@ -6,6 +6,18 @@ import Fade from '@mui/material/Fade';
 import './index.css';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import { Grid } from '@material-ui/core';
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import AddIcon from '@mui/icons-material/Add';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
+import Typography from '@mui/material/Typography';
+import FormControl from '@mui/material/FormControl';
+import Card from '@material-ui/core/Card';
+import Divider from '@material-ui/core/Divider';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const initialForm = {
   title: '',
@@ -41,6 +53,7 @@ const ModalEditService = ({
     editServiceSelect(form);
     setOpen(false);
   };
+  console.log(form);
   return (
     <div>
       <Modal
@@ -53,61 +66,73 @@ const ModalEditService = ({
       >
         <Fade in={open}>
           <Box className="modal-container">
-            <form onSubmit={handleSubmit}>
-              <div className="form-outline mb-4">
-                <label className="form-label">Titulo</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  onChange={handleChange}
-                  name="title"
-                  value={form.title}
-                />
-              </div>
-
-              <div className="form-outline mb-4">
-                <label className="form-label">Descripcion</label>
-                <textarea
-                  className="form-control"
-                  rows="4"
-                  placeholder="Descripcion"
-                  value={form.description}
-                  onChange={handleChange}
-                  name="description"
-                ></textarea>
-              </div>
-              <div className="form-outline mb-4">
-                <select
-                  className="form-select"
-                  aria-label="Default select example"
-                  onChange={handleChange}
-                  name="type"
-                  value={form.type}
+            <Card className="card-container" style={{ padding: '2rem' }}>
+              <Typography variant="h4" gutterBottom component="div">
+                Editar Servicio
+              </Typography>
+              <Grid item container spacing={1} justify="center">
+                <Grid item xs={12}>
+                  <FormControl fullWidth>
+                    <TextField
+                      label="Nombre"
+                      size="small"
+                      type="Nombre"
+                      onChange={handleChange}
+                      name="title"
+                      value={form.title}
+                      className="form-input"
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <FormControl fullWidth>
+                    <TextareaAutosize
+                      aria-label="minimum height"
+                      maxRows={5}
+                      minRows={5}
+                      placeholder="Descripcion"
+                      value={form.description}
+                      onChange={handleChange}
+                      name="description"
+                      className="form-text-area"
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">Tipos</InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      label="Tipo"
+                      name="type"
+                      onChange={handleChange}
+                      value={form.type}
+                    >
+                      <MenuItem value="Auto">Autos</MenuItem>
+                      <MenuItem value="Salud">Salud</MenuItem>
+                      <MenuItem value="Hogar">Hogar</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+              </Grid>
+              <Divider className="card-divider" light />
+              <Stack direction="row" spacing={1}>
+                <Button
+                  variant="outlined"
+                  startIcon={<AddIcon />}
+                  onClick={handleSubmit}
                 >
-                  <option value="Auto">Autos</option>
-                  <option value="Salud">Salud</option>
-                  <option value="Hogar">Hogar</option>
-                </select>
-              </div>
-              <div>
-                <Stack spacing={2} direction="row">
-                  <Button
-                    variant="contained"
-                    color="success"
-                    onClick={handleSubmit}
-                  >
-                    Aceptar
-                  </Button>
-                  <Button
-                    variant="contained"
-                    color="error"
-                    onClick={() => setOpen(false)}
-                  >
-                    Cancelar
-                  </Button>
-                </Stack>
-              </div>
-            </form>
+                  Aceptar
+                </Button>
+                <Button
+                  variant="outlined"
+                  startIcon={<DeleteIcon />}
+                  onClick={() => setOpen(false)}
+                >
+                  Cancelar
+                </Button>
+              </Stack>
+            </Card>
           </Box>
         </Fade>
       </Modal>
