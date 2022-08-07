@@ -4,12 +4,19 @@ import { useDispatch } from 'react-redux';
 import './style.css';
 import { addService } from '../../store/actions';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import Divider from '@material-ui/core/Divider';
 import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
+import { Grid } from '@material-ui/core';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import AddIcon from '@mui/icons-material/Add';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
+import Typography from '@mui/material/Typography';
+import FormControl from '@mui/material/FormControl';
+import Button from '@mui/material/Button';
 
 const initialForm = {
   title: '',
@@ -43,77 +50,73 @@ const Form = () => {
 
   return (
     <>
-      <Card className="card-container">
-        <CardContent className="card-content">
-          <div className="form-container">
-            <form className="card form" onSubmit={handleSubmit}>
-              <div className="card-body">
-                <h5 className="card-title">Servicios</h5>
-                <div className="mb-3">
-                  <label className="form-label">Nombre</label>
-                  <input
-                    type="Nombre"
-                    className="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Nombre"
-                    onChange={handleChange}
-                    name="title"
-                    value={form.title}
-                  />
-                </div>
-                <div className="mb-3">
-                  <label className="form-label">Descripcion</label>
-                  <textarea
-                    className="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="2"
-                    placeholder="Descripcion"
-                    value={form.description}
-                    onChange={handleChange}
-                    name="description"
-                  ></textarea>
-                </div>
-                <select
-                  className="form-select"
-                  aria-label="Default select example"
-                  onChange={handleChange}
-                  name="type"
-                  value={form.type}
-                >
-                  <option value="">Tipos</option>
-                  <option value="Auto">Autos</option>
-                  <option value="Salud">Salud</option>
-                  <option value="Hogar">Hogar</option>
-                </select>
-              </div>
-              <div className="card-footer d-flex justify-content-around">
-                <button
-                  type="button"
-                  className="btn btn-outline-success"
-                  onClick={handleSubmit}
-                >
-                  Agregar
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-outline-danger"
-                  onClick={handleReset}
-                >
-                  Eliminar
-                </button>
-              </div>
-            </form>
-          </div>
-          <Divider className="card-divider" light />
-          <Stack direction="row" spacing={1}>
-            <IconButton aria-label="delete" o>
-              <DeleteIcon />
-            </IconButton>
-            <IconButton aria-label="delete">
-              <EditIcon />
-            </IconButton>
-          </Stack>
-        </CardContent>
+      <Card className="card-container" style={{ padding: '20px' }}>
+        <Typography variant="h4" gutterBottom component="div">
+          Registrar Servicio
+        </Typography>
+        <Grid item container spacing={1} justify="center">
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <TextField
+                label="Nombre"
+                size="small"
+                type="Nombre"
+                onChange={handleChange}
+                name="title"
+                value={form.title}
+                className="form-input"
+              />
+            </FormControl>
+          </Grid>
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <TextareaAutosize
+                aria-label="minimum height"
+                maxRows={3}
+                minRows={3}
+                placeholder="Descripcion"
+                value={form.description}
+                onChange={handleChange}
+                name="description"
+                className="form-text-area"
+              />
+            </FormControl>
+          </Grid>
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Tipos</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                label="Tipo"
+                name="type"
+                onChange={handleChange}
+                value={form.type}
+              >
+                <MenuItem value="">Tipos</MenuItem>
+                <MenuItem value="Auto">Autos</MenuItem>
+                <MenuItem value="Salud">Salud</MenuItem>
+                <MenuItem value="Hogar">Hogar</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+        </Grid>
+        <Divider className="card-divider" light />
+        <Stack direction="row" spacing={1}>
+          <Button
+            variant="outlined"
+            startIcon={<AddIcon />}
+            onClick={handleSubmit}
+          >
+            Agregar
+          </Button>
+          <Button
+            variant="outlined"
+            startIcon={<DeleteIcon />}
+            onClick={handleReset}
+          >
+            Eliminar
+          </Button>
+        </Stack>
       </Card>
     </>
   );
