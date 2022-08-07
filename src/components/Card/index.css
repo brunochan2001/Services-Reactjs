@@ -1,12 +1,30 @@
-.cardgrid {
+.card-grid-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
-.card {
-  width: 210px;
+.card-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-container {
+  margin: auto;
+  transition: 0.3s;
+  box-shadow: 0 16px 70px -12.125px rgba(0, 0, 0, 0.2) !important;
+}
+.card-container:hover {
+  box-shadow: 0 16px 70px -12.125px rgba(0, 0, 0, 0.4) !important;
+}
+.card-content {
+  padding: 24px;
+  text-align: left;
+  padding-bottom: 24px;
+}
+.card-divider {
+  background-color: rgba(0, 0, 0, 0);
+  margin: 24px 0 !important;
+  border: none;
+  height: 1px;
 }
 @media (min-width: 576px) {
   .cardgrid {

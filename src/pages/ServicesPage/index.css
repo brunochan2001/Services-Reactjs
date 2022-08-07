@@ -5,6 +5,8 @@
   align-items: center;
   padding: 2rem 4rem;
   font-size: 14px;
+  max-width: 1550px;
+  margin: auto;
 }
 @media (min-width: 576px) {
   .main {

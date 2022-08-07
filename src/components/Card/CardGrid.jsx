@@ -1,20 +1,27 @@
 import React from 'react';
 import CardItem from './CardItem';
 import './index.css';
+import { Grid } from '@material-ui/core';
 
-export const CardGrid = ({ services, deleteService, editService }) => {
+const CardGrid = ({ services, deleteService, editService }) => {
   return (
     <>
-      <div className="cardgrid">
-        {services.map((service, index) => (
-          <CardItem
-            key={index}
-            service={service}
-            deleteService={deleteService}
-            editService={editService}
-          ></CardItem>
-        ))}
+      <div className="card-grid-container">
+        <Grid container spacing={4} justify="flex-start">
+          {services.map((service, index) => (
+            <Grid item xs={12} sm={12} md={6} lg={3} key={index}>
+              <CardItem
+                className="card-item"
+                service={service}
+                deleteService={deleteService}
+                editService={editService}
+              ></CardItem>
+            </Grid>
+          ))}
+        </Grid>
       </div>
     </>
   );
 };
+
+export default CardGrid;
