@@ -7,4 +7,7 @@ export const deleteService = (id, data) => {
 export const addService = data => {
   return { type: ADD_SERVICE, payload: data };
 };
-export const editService = () => ({ type: EDIT_SERVICE });
+export const editService = (service, data) => {
+  const newData = data.map(el => (el.id === service.id ? service : el));
+  return { type: EDIT_SERVICE, payload: newData };
+};

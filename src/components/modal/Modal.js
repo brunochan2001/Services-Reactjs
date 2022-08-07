@@ -14,7 +14,12 @@ const initialForm = {
   id: ''
 };
 
-const ModalEditService = ({ open, setOpen, serviceSelect }) => {
+const ModalEditService = ({
+  open,
+  setOpen,
+  serviceSelect,
+  editServiceSelect
+}) => {
   const [form, setForm] = useState(initialForm);
 
   useEffect(() => {
@@ -31,9 +36,11 @@ const ModalEditService = ({ open, setOpen, serviceSelect }) => {
     e.preventDefault();
     if (!form.title || !form.description || !form.type) {
       alert('Datos incompletos');
+      return;
     }
+    editServiceSelect(form);
+    setOpen(false);
   };
-  console.log(form);
   return (
     <div>
       <Modal
@@ -43,9 +50,6 @@ const ModalEditService = ({ open, setOpen, serviceSelect }) => {
         onClose={() => setOpen(false)}
         closeAfterTransition
         BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500
-        }}
       >
         <Fade in={open}>
           <Box className="modal-container">

@@ -4,7 +4,7 @@ import { CardGrid } from '../../components/Card/CardGrid';
 import Form from '../../components/Form';
 import ModalEditService from '../../components/modal/Modal';
 import Navigation from '../../components/Navigation';
-import { deleteService } from '../../store/actions';
+import { deleteService, editService } from '../../store/actions';
 
 const ServicesPage = () => {
   const dispatch = useDispatch();
@@ -21,10 +21,15 @@ const ServicesPage = () => {
     dispatch(deleteService(id, data));
   };
 
-  const editService = service => {
+  const openModal = service => {
     setOpen(true);
     setServiceSelect(service);
   };
+
+  const editServiceSelect = service => {
+    dispatch(editService(service, data));
+  };
+
   return (
     <>
       <Navigation></Navigation>
@@ -32,7 +37,7 @@ const ServicesPage = () => {
         <CardGrid
           services={services}
           deleteService={deleteServiceId}
-          editService={editService}
+          editService={openModal}
         />
         <Form></Form>
       </main>
@@ -40,6 +45,7 @@ const ServicesPage = () => {
         open={open}
         setOpen={setOpen}
         serviceSelect={serviceSelect}
+        editServiceSelect={editServiceSelect}
       ></ModalEditService>
     </>
   );

@@ -14,7 +14,7 @@ const serviceReducer = (state = initialState, action) => {
         data: payload
       };
     case EDIT_SERVICE:
-      return state;
+      return { ...state, data: payload };
     case ADD_SERVICE:
       return { ...state, data: [...state.data, payload] };
     default:
