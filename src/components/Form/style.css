@@ -2,7 +2,11 @@
   position: relative;
 }
 .form {
-  width: 18rem;
   position: absolute;
   right: 0;
+}
+@media (min-width: 576px) {
+  .form-container {
+    width: 300px;
+  }
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import CardItem from './CardItem';
+import './index.css';
 
 export const CardGrid = ({ services, deleteService, editService }) => {
   return (
     <>
-      <div className="d-flex flex-wrap w-75" style={{ gap: '1rem' }}>
+      <div className="cardgrid">
         {services.map((service, index) => (
           <CardItem
             key={index}

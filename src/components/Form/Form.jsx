@@ -35,7 +35,7 @@ const Form = () => {
   };
 
   return (
-    <div className="w-25 form-container">
+    <div className="form-container">
       <form className="card form" onSubmit={handleSubmit}>
         <div className="card-body">
           <h5 className="card-title">Servicios</h5>

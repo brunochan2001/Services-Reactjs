@@ -5,6 +5,7 @@ import Form from '../../components/Form';
 import ModalEditService from '../../components/modal/Modal';
 import Navigation from '../../components/Navigation';
 import { deleteService, editService } from '../../store/actions';
+import './index.css';
 
 const ServicesPage = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const ServicesPage = () => {
   return (
     <>
       <Navigation></Navigation>
-      <main className="w-75 mx-auto d-flex  py-4">
+      <main className="main">
         <CardGrid
           services={services}
           deleteService={deleteServiceId}
