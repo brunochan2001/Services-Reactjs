@@ -3,7 +3,8 @@ import {
   DELETE_SERVICE,
   EDIT_SERVICE,
   GET_SERVICE_LOADING,
-  GET_SERVICE_SUCCESS
+  GET_SERVICE_SUCCESS,
+  UPDATE_LOCAL_STORE
 } from '../actionTypes';
 
 export const deleteService = (id, data) => {
@@ -11,6 +12,8 @@ export const deleteService = (id, data) => {
   return { type: DELETE_SERVICE, payload: service };
 };
 export const addService = data => {
+  const dataLocal = JSON.parse(localStorage.getItem('service'));
+  console.log(dataLocal);
   return { type: ADD_SERVICE, payload: data };
 };
 export const editService = (service, data) => {
@@ -24,4 +27,8 @@ export const getServicesLoading = () => {
 
 export const getServicessuccess = () => {
   return { type: GET_SERVICE_SUCCESS };
+};
+
+export const updateLocalStore = data => {
+  return { type: UPDATE_LOCAL_STORE, payload: data };
 };

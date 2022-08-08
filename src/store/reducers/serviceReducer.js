@@ -1,10 +1,10 @@
-import servicesdata from '../../data/servicesData';
 import {
   ADD_SERVICE,
   DELETE_SERVICE,
   EDIT_SERVICE,
   GET_SERVICE_LOADING,
-  GET_SERVICE_SUCCESS
+  GET_SERVICE_SUCCESS,
+  UPDATE_LOCAL_STORE
 } from '../actionTypes';
 
 const initialState = {
@@ -27,7 +27,9 @@ const serviceReducer = (state = initialState, action) => {
     case GET_SERVICE_LOADING:
       return { ...state, loading: true };
     case GET_SERVICE_SUCCESS:
-      return { ...state, loading: false, data: servicesdata };
+      return { ...state, loading: false };
+    case UPDATE_LOCAL_STORE:
+      return { ...state, data: payload };
     default:
       return state;
   }

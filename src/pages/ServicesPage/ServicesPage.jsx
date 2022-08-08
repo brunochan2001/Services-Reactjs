@@ -8,7 +8,8 @@ import {
   deleteService,
   editService,
   getServicesLoading,
-  getServicessuccess
+  getServicessuccess,
+  updateLocalStore
 } from '../../store/actions';
 import { Grid } from '@material-ui/core';
 import './index.css';
@@ -17,12 +18,13 @@ import Spin from '../../components/Spin';
 
 const ServicesPage = () => {
   const dispatch = useDispatch();
-  const [services, setServices] = useState([]);
   const { data, loading } = useSelector(state => state.service);
   const [open, setOpen] = useState(false);
   const [serviceSelect, setServiceSelect] = useState([]);
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
+    dispatch(updateLocalStore(JSON.parse(localStorage.getItem('service'))));
     dispatch(getServicesLoading());
     setTimeout(() => {
       dispatch(getServicessuccess());
@@ -31,6 +33,12 @@ const ServicesPage = () => {
 
   useEffect(() => {
     setServices(data);
+    const serviceLocalStorage = JSON.parse(localStorage.getItem('service'));
+    if (serviceLocalStorage) {
+      localStorage.setItem('service', JSON.stringify(data));
+    } else {
+      localStorage.setItem('service', JSON.stringify([]));
+    }
   }, [data]);
 
   const deleteServiceId = id => {
