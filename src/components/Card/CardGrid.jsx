@@ -75,9 +75,11 @@ const CardGrid = ({ services, deleteService, editService }) => {
 };
 
 CardGrid.propTypes = {
-  service: PropTypes.array.isRequired,
+  services: PropTypes.array.isRequired,
   deleteService: PropTypes.func,
   editService: PropTypes.func
 };
+
 CardGrid.defaultProps = { services: [] };
+
 export default CardGrid;

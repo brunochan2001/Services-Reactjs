@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import './style.css';
 import { addService } from '../../store/actions';
@@ -8,12 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Grid } from '@material-ui/core';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
-import Select from '@mui/material/Select';
 import AddIcon from '@mui/icons-material/Add';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
@@ -50,7 +45,7 @@ const Form = () => {
       });
       return;
     }
-    form.id = uuidv4();
+    form.id = v4();
     dispatch(addService(form));
     handleReset();
     Swal.fire({
@@ -71,46 +66,50 @@ const Form = () => {
         <Grid item container spacing={1} style={{ justifyContent: 'center' }}>
           <Grid item xs={12}>
             <FormControl fullWidth>
-              <TextField
-                label="Nombre"
-                size="small"
-                type="Nombre"
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Nombre"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
                 onChange={handleChange}
                 name="title"
                 value={form.title}
-                className="form-input"
+                data-testid="input-element"
               />
             </FormControl>
           </Grid>
           <Grid item xs={12}>
             <FormControl fullWidth>
-              <TextareaAutosize
-                aria-label="minimum height"
-                maxRows={3}
-                minRows={3}
-                placeholder="Descripcion"
-                value={form.description}
-                onChange={handleChange}
-                name="description"
-                className="form-text-area"
-              />
+              <div className="form-floating">
+                <textarea
+                  className="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style={{ height: '80px' }}
+                  value={form.description}
+                  onChange={handleChange}
+                  data-testid="textarea-element"
+                  name="description"
+                ></textarea>
+                <label>Descripcion</label>
+              </div>
             </FormControl>
           </Grid>
           <Grid item xs={12}>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Tipos</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                label="Tipo"
+              <select
+                className="form-select"
                 name="type"
                 onChange={handleChange}
                 value={form.type}
+                data-testid="select-element"
               >
-                <MenuItem value="">Tipos</MenuItem>
-                <MenuItem value="Auto">Autos</MenuItem>
-                <MenuItem value="Salud">Salud</MenuItem>
-                <MenuItem value="Hogar">Hogar</MenuItem>
-              </Select>
+                <option value="">Tipos</option>
+                <option value="Auto">Auto</option>
+                <option value="Salud">Salud</option>
+                <option value="Hogar">Hogar</option>
+              </select>
             </FormControl>
           </Grid>
         </Grid>
@@ -120,6 +119,7 @@ const Form = () => {
             variant="outlined"
             startIcon={<AddIcon />}
             onClick={handleSubmit}
+            data-testid="button-onsubmit-element"
           >
             Agregar
           </Button>
