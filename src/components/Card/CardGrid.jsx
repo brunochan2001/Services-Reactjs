@@ -5,6 +5,7 @@ import { Grid } from '@material-ui/core';
 import { Pagination } from '@mui/material';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
+import PropTypes from 'prop-types';
 
 const CardGrid = ({ services, deleteService, editService }) => {
   const firstIndex = 0;
@@ -19,6 +20,7 @@ const CardGrid = ({ services, deleteService, editService }) => {
     );
     setData(dataFilter);
   }, [services, page]);
+
   const handleChange = (e, value) => {
     setPage(value);
     setData(
@@ -72,4 +74,10 @@ const CardGrid = ({ services, deleteService, editService }) => {
   );
 };
 
+CardGrid.propTypes = {
+  service: PropTypes.array.isRequired,
+  deleteService: PropTypes.func,
+  editService: PropTypes.func
+};
+CardGrid.defaultProps = { services: [] };
 export default CardGrid;

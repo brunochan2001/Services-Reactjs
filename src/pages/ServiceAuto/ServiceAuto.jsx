@@ -28,8 +28,8 @@ const ServiceAuto = () => {
   }, []);
 
   useEffect(() => {
-    const serviceHome = data.filter(e => e.type === 'Auto');
-    setServices(serviceHome);
+    const serviceAuto = data.filter(e => e.type === 'Auto');
+    setServices(serviceAuto);
   }, [data]);
 
   const deleteServiceId = id => {

@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <CardGrid/> debe de hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="card-grid-container"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4"
+      style="justify-content: center;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 MuiGrid-grid-xl-4"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root card-container MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root card-content"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography--heading MuiTypography-h6 MuiTypography-gutterBottom"
+            >
+              salud
+            </h6>
+            <span
+              class="MuiTypography-root MuiTypography--subheading MuiTypography-caption"
+            >
+              compra
+            </span>
+            <hr
+              class="MuiDivider-root card-divider MuiDivider-light"
+            />
+            <div
+              class="css-o2cger-MuiStack-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                </span>
+                Editar
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+                Eliminar
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-4 MuiGrid-grid-xl-4"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root card-container MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root card-content"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography--heading MuiTypography-h6 MuiTypography-gutterBottom"
+            >
+              Hogar
+            </h6>
+            <span
+              class="MuiTypography-root MuiTypography--subheading MuiTypography-caption"
+            >
+              Compra de comida
+            </span>
+            <hr
+              class="MuiDivider-root card-divider MuiDivider-light"
+            />
+            <div
+              class="css-o2cger-MuiStack-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="EditIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                    />
+                  </svg>
+                </span>
+                Editar
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="DeleteIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                    />
+                  </svg>
+                </span>
+                Eliminar
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <nav
+      aria-label="pagination navigation"
+      class="MuiPagination-root MuiPagination-text pagination css-1oj2twp-MuiPagination-root"
+      style="display: flex; flex-direction: row-reverse; padding: 1rem 0px;"
+    >
+      <ul
+        class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
+      >
+        <li>
+          <button
+            aria-label="Go to previous page"
+            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary Mui-disabled MuiPaginationItem-previousNext css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              data-testid="NavigateBeforeIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            aria-current="true"
+            aria-label="page 1"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary Mui-selected MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+            tabindex="0"
+            type="button"
+          >
+            1
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </li>
+        <li>
+          <button
+            aria-label="Go to next page"
+            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary Mui-disabled MuiPaginationItem-previousNext css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              data-testid="NavigateNextIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;

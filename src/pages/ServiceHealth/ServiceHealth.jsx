@@ -27,8 +27,8 @@ const ServiceHealth = () => {
   }, []);
 
   useEffect(() => {
-    const serviceHome = data.filter(e => e.type === 'Salud');
-    setServices(serviceHome);
+    const serviceHealth = data.filter(e => e.type === 'Salud');
+    setServices(serviceHealth);
   }, [data]);
 
   const deleteServiceId = id => {

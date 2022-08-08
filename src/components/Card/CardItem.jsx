@@ -7,7 +7,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-
+import PropTypes from 'prop-types';
 import './index.css';
 
 const CardItem = ({ service, deleteService, editService }) => {
@@ -51,6 +51,12 @@ const CardItem = ({ service, deleteService, editService }) => {
       </Card>
     </>
   );
+};
+
+CardItem.propTypes = {
+  service: PropTypes.object.isRequired,
+  deleteService: PropTypes.func,
+  editService: PropTypes.func
 };
 
 export default CardItem;
