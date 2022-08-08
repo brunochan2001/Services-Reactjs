@@ -17,7 +17,6 @@ const CardGrid = ({ services, deleteService, editService }) => {
     );
     setData(dataFilter);
   }, [services, page]);
-
   const handleChange = (e, value) => {
     setPage(value);
     setData(
@@ -28,9 +27,9 @@ const CardGrid = ({ services, deleteService, editService }) => {
   return (
     <>
       <div className="card-grid-container">
-        <Grid container spacing={4} justify="flex-start">
+        <Grid container spacing={4} justify="flex-center">
           {data.map((service, index) => (
-            <Grid item xs={12} sm={6} md={6} lg={4} xl={3} key={index}>
+            <Grid item xs={12} sm={6} md={6} lg={4} xl={4} key={index}>
               <CardItem
                 className="card-item"
                 service={service}
@@ -42,18 +41,22 @@ const CardGrid = ({ services, deleteService, editService }) => {
         </Grid>
       </div>
       <div>
-        <Pagination
-          count={Math.ceil(services.length / pageSize)}
-          page={page}
-          onChange={handleChange}
-          color="primary"
-          className="pagination"
-          style={{
-            display: 'flex',
-            flexDirection: 'row-reverse',
-            padding: '1rem 0'
-          }}
-        />
+        {services.length ? (
+          <Pagination
+            count={Math.ceil(services.length / pageSize)}
+            page={page}
+            onChange={handleChange}
+            color="primary"
+            className="pagination"
+            style={{
+              display: 'flex',
+              flexDirection: 'row-reverse',
+              padding: '1rem 0'
+            }}
+          />
+        ) : (
+          ''
+        )}
       </div>
     </>
   );

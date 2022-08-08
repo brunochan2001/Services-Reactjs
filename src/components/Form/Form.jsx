@@ -115,7 +115,7 @@ const Form = () => {
           </Grid>
         </Grid>
         <Divider className="card-divider" light />
-        <Stack direction="row" spacing={1}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
           <Button
             variant="outlined"
             startIcon={<AddIcon />}
