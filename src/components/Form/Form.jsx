@@ -68,7 +68,7 @@ const Form = () => {
         <Typography variant="h5" gutterBottom component="div">
           Registrar Servicio
         </Typography>
-        <Grid item container spacing={1} justify="center">
+        <Grid item container spacing={1} style={{ justifyContent: 'center' }}>
           <Grid item xs={12}>
             <FormControl fullWidth>
               <TextField

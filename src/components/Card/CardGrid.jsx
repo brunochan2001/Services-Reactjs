@@ -29,7 +29,7 @@ const CardGrid = ({ services, deleteService, editService }) => {
   return (
     <>
       <div className="card-grid-container">
-        <Grid container spacing={4} justify="flex-center">
+        <Grid container spacing={4} style={{ justifyContent: 'center' }}>
           {data.map((service, index) => (
             <Grid item xs={12} sm={6} md={6} lg={4} xl={4} key={index}>
               <CardItem

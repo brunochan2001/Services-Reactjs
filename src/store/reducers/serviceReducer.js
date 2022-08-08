@@ -6,6 +6,12 @@ import {
   GET_SERVICE_SUCCESS
 } from '../actionTypes';
 
+const createLocalStorage = JSON.parse(localStorage.getItem('service'));
+if (createLocalStorage) {
+  console.log('createLocalStorage', createLocalStorage);
+} else {
+  localStorage.setItem('service', JSON.stringify([]));
+}
 const dataLocalStorage = JSON.parse(localStorage.getItem('service'));
 
 const initialState = {

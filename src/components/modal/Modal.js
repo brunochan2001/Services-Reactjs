@@ -68,7 +68,12 @@ const ModalEditService = ({
               <Typography variant="h4" gutterBottom component="div">
                 Editar Servicio
               </Typography>
-              <Grid item container spacing={1} justify="center">
+              <Grid
+                item
+                container
+                spacing={1}
+                style={{ justifyContent: 'center' }}
+              >
                 <Grid item xs={12}>
                   <FormControl fullWidth>
                     <TextField
