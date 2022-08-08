@@ -8,8 +8,7 @@ import {
   deleteService,
   editService,
   getServicesLoading,
-  getServicessuccess,
-  updateLocalStore
+  getServicessuccess
 } from '../../store/actions';
 import { Grid } from '@material-ui/core';
 import './index.css';
@@ -24,7 +23,6 @@ const ServicesPage = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    dispatch(updateLocalStore(JSON.parse(localStorage.getItem('service'))));
     dispatch(getServicesLoading());
     setTimeout(() => {
       dispatch(getServicessuccess());
@@ -76,7 +74,14 @@ const ServicesPage = () => {
         <>
           <main className="main">
             <Grid container spacing={4}>
-              <Grid item xs={12} sm={12} md={7} lg={8}>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={7}
+                lg={8}
+                style={{ position: 'relative' }}
+              >
                 <CardGrid
                   services={services}
                   deleteService={deleteServiceId}

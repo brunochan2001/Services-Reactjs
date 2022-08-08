@@ -3,6 +3,5 @@ export {
   addService,
   editService,
   getServicesLoading,
-  getServicessuccess,
-  updateLocalStore
+  getServicessuccess
 } from './serviceAction';

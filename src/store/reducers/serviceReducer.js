@@ -3,12 +3,13 @@ import {
   DELETE_SERVICE,
   EDIT_SERVICE,
   GET_SERVICE_LOADING,
-  GET_SERVICE_SUCCESS,
-  UPDATE_LOCAL_STORE
+  GET_SERVICE_SUCCESS
 } from '../actionTypes';
 
+const dataLocalStorage = JSON.parse(localStorage.getItem('service'));
+
 const initialState = {
-  data: [],
+  data: [...dataLocalStorage],
   loading: false
 };
 
@@ -28,8 +29,6 @@ const serviceReducer = (state = initialState, action) => {
       return { ...state, loading: true };
     case GET_SERVICE_SUCCESS:
       return { ...state, loading: false };
-    case UPDATE_LOCAL_STORE:
-      return { ...state, data: payload };
     default:
       return state;
   }
