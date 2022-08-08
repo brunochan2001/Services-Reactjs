@@ -9,7 +9,7 @@ import {
   getServicesLoading,
   getServicessuccess
 } from '../../store/actions';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import Spin from '../../components/Spin';
 
 const ServiceHealth = () => {
@@ -47,6 +47,9 @@ const ServiceHealth = () => {
   return (
     <>
       <Navigation></Navigation>
+      <Typography variant="h4" component="div" className="title" gutterBottom>
+        Servicios de Salud
+      </Typography>
       {loading ? (
         <Spin></Spin>
       ) : (

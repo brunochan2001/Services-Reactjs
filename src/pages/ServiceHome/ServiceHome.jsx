@@ -9,8 +9,9 @@ import {
   getServicesLoading,
   getServicessuccess
 } from '../../store/actions';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import Spin from '../../components/Spin';
+import './index.css';
 
 const ServiceHome = () => {
   const dispatch = useDispatch();
@@ -47,6 +48,9 @@ const ServiceHome = () => {
   return (
     <>
       <Navigation></Navigation>
+      <Typography variant="h4" component="div" className="title" gutterBottom>
+        Servicios de Hogar
+      </Typography>
       {loading ? (
         <Spin></Spin>
       ) : (

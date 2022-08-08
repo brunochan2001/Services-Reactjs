@@ -14,6 +14,7 @@ import { Grid } from '@material-ui/core';
 import './index.css';
 import Swal from 'sweetalert2';
 import Spin from '../../components/Spin';
+import Typography from '@mui/material/Typography';
 
 const ServicesPage = () => {
   const dispatch = useDispatch();
@@ -68,6 +69,9 @@ const ServicesPage = () => {
   return (
     <>
       <Navigation></Navigation>
+      <Typography variant="h4" component="div" className="title" gutterBottom>
+        Servicios
+      </Typography>
       {loading ? (
         <Spin></Spin>
       ) : (

@@ -65,7 +65,7 @@ const Form = () => {
   return (
     <>
       <Card className="card-container" style={{ padding: '20px' }}>
-        <Typography variant="h4" gutterBottom component="div">
+        <Typography variant="h5" gutterBottom component="div">
           Registrar Servicio
         </Typography>
         <Grid item container spacing={1} justify="center">
