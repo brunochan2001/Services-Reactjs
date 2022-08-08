@@ -26,3 +26,13 @@
   border: none;
   height: 1px;
 }
+.alert-container {
+  min-height: 150px;
+  position: relative;
+}
+.alert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+}
