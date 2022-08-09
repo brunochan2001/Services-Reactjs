@@ -5,6 +5,7 @@ import { Pagination } from '@mui/material';
 import PropTypes from 'prop-types';
 import AlertInfo from '../alert/alertInfo';
 import './index.css';
+import Search from '../Search';
 
 const CardGrid = ({ services, deleteService, editService }) => {
   const firstIndex = 0;
@@ -29,6 +30,7 @@ const CardGrid = ({ services, deleteService, editService }) => {
 
   return (
     <>
+      <Search></Search>
       <div className="card-grid-container">
         <Grid container spacing={4} className="card-grid">
           {data.map((service, index) => (

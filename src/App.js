@@ -11,7 +11,7 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <Routes>
-            <Route exact path="/Inicio" element={<ServicesPage />} />
+            <Route exact path="/" element={<ServicesPage />} />
             <Route exact path="/Auto" element={<ServiceAuto />} />
             <Route exact path="/Salud" element={<ServiceHealth />} />
             <Route exact path="/Hogar" element={<ServiceHome />} />
