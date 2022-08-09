@@ -60,8 +60,8 @@ const ModalEditService = ({
       >
         <Fade in={open}>
           <Box className="modal-container">
-            <Card style={{ padding: '2rem' }}>
-              <Typography variant="h4" gutterBottom component="div">
+            <Card style={{ padding: '.5rem' }} className="card-modal">
+              <Typography variant="h6" gutterBottom component="div">
                 Editar Servicio
               </Typography>
               <Grid

@@ -29,3 +29,11 @@
 .counter {
   margin: 0;
 }
+.card-modal {
+  padding: 0.5rem;
+}
+@media (min-width: 576px) {
+  .card-modal {
+    padding: 2rem;
+  }
+}

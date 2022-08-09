@@ -32,11 +32,9 @@ const CardGrid = ({ services, deleteService, editService }) => {
       serviceData.slice(firstIndex + pageSize * (value - 1), pageSize * value)
     );
   };
-  console.log('sserviceData', serviceData);
-  console.log('data', data);
 
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
       <Search services={services} setServicesData={setServicesData}></Search>
       <div className="card-grid-container">
         <Grid container spacing={4} className="card-grid">
@@ -67,7 +65,7 @@ const CardGrid = ({ services, deleteService, editService }) => {
           <AlertInfo />
         )}
       </div>
-    </>
+    </div>
   );
 };
 

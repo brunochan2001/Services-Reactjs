@@ -15,7 +15,7 @@ const CardItem = ({ service, deleteService, editService }) => {
 
   return (
     <>
-      <Card className="card-container">
+      <Card className="card-container" style={{ padding: 0 }}>
         <CardContent className="card-content">
           <Typography
             className={'MuiTypography--heading'}

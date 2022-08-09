@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDebounce } from 'react-use';
+import TextField from '@mui/material/TextField';
 import './index.css';
 
 const Search = ({ services, setServicesData }) => {
@@ -8,7 +9,7 @@ const Search = ({ services, setServicesData }) => {
     () => {
       SearchData(val);
     },
-    1000,
+    400,
     [val]
   );
 
@@ -27,17 +28,17 @@ const Search = ({ services, setServicesData }) => {
   };
 
   return (
-    <div className="search-input-container">
-      <input
-        type="text"
-        value={val}
-        placeholder="Buscar tu servicios"
+    <>
+      <TextField
+        fullWidth
+        label="Buscador"
+        id="fullWidth"
+        className="search-input"
         onChange={({ currentTarget }) => {
           setVal(currentTarget.value);
         }}
-        className="search-input"
       />
-    </div>
+    </>
   );
 };
 
