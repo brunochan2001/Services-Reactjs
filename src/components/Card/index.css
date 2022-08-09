@@ -36,3 +36,6 @@
   right: 0;
   top: 40%;
 }
+.stack-container {
+  justify-content: center;
+}

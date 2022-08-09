@@ -7,12 +7,12 @@ import './index.css';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { Grid } from '@material-ui/core';
-import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
-import DeleteIcon from '@mui/icons-material/Delete';
+import CloseIcon from '@mui/icons-material/Close';
+import CheckIcon from '@mui/icons-material/Check';
 import PropTypes from 'prop-types';
 
 const initialForm = {
@@ -123,7 +123,7 @@ const ModalEditService = ({
               <Stack direction="row" spacing={1}>
                 <Button
                   variant="outlined"
-                  startIcon={<AddIcon />}
+                  startIcon={<CheckIcon />}
                   onClick={handleSubmit}
                   data-testid="button-onsubmit-element"
                 >
@@ -131,11 +131,11 @@ const ModalEditService = ({
                 </Button>
                 <Button
                   variant="outlined"
-                  startIcon={<DeleteIcon />}
+                  startIcon={<CloseIcon />}
                   onClick={() => setOpen(false)}
                   data-testid="button-hide-modal"
                 >
-                  Cancelar
+                  Cerrar
                 </Button>
               </Stack>
             </Card>

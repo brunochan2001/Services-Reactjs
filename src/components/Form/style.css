@@ -35,6 +35,9 @@ textarea:focus {
   border: none;
   height: 1px;
 }
+.stack-container {
+  justify-content: center;
+}
 @media (min-width: 576px) {
   .form-container {
     width: 300px;

@@ -31,7 +31,11 @@ const CardItem = ({ service, deleteService, editService }) => {
             {description}
           </Typography>
           <Divider className="card-divider" light />
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            spacing={1}
+            className="stack-container"
+          >
             <Button
               variant="outlined"
               startIcon={<EditIcon />}

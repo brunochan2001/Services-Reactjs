@@ -5,7 +5,6 @@ import './style.css';
 import { addService } from '../../store/actions';
 import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
-import DeleteIcon from '@mui/icons-material/Delete';
 import { Grid } from '@material-ui/core';
 import Stack from '@mui/material/Stack';
 import AddIcon from '@mui/icons-material/Add';
@@ -13,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import Swal from 'sweetalert2';
+import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
 
 const initialForm = {
   title: '',
@@ -114,7 +114,11 @@ const Form = () => {
           </Grid>
         </Grid>
         <Divider className="card-divider" light />
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          className="stack-container"
+          spacing={1}
+        >
           <Button
             variant="outlined"
             startIcon={<AddIcon />}
@@ -125,10 +129,10 @@ const Form = () => {
           </Button>
           <Button
             variant="outlined"
-            startIcon={<DeleteIcon />}
+            startIcon={<CleaningServicesIcon />}
             onClick={handleReset}
           >
-            Eliminar
+            Limpiar
           </Button>
         </Stack>
       </Card>
