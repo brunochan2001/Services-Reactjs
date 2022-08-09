@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import CardItem from './CardItem';
+import Search from '../Search';
 import { Grid } from '@material-ui/core';
 import { Pagination } from '@mui/material';
-import PropTypes from 'prop-types';
 import AlertInfo from '../alert/alertInfo';
 import './index.css';
-import Search from '../Search';
 
 const CardGrid = ({ services, deleteService, editService }) => {
   const firstIndex = 0;

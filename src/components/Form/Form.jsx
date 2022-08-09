@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { v4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import './style.css';
+import { v4 } from 'uuid';
 import { addService } from '../../store/actions';
 import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
@@ -11,8 +10,9 @@ import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
-import Swal from 'sweetalert2';
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices';
+import Swal from 'sweetalert2';
+import './style.css';
 
 const initialForm = {
   title: '',

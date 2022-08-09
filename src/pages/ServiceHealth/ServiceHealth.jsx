@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import CardGrid from '../../components/Card/CardGrid';
 import ModalEditService from '../../components/modal/Modal';
 import Navigation from '../../components/Navigation';
+import Spin from '../../components/Spin';
+import Form from '../../components/Form';
 import {
   deleteService,
   editService,
@@ -10,8 +12,6 @@ import {
   getServicessuccess
 } from '../../store/actions';
 import { Grid, Typography } from '@material-ui/core';
-import Spin from '../../components/Spin';
-import Form from '../../components/Form';
 
 const ServiceHealth = () => {
   const dispatch = useDispatch();

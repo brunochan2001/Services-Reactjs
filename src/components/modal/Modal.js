@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import './index.css';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { Grid } from '@material-ui/core';
@@ -13,7 +13,7 @@ import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
 import CloseIcon from '@mui/icons-material/Close';
 import CheckIcon from '@mui/icons-material/Check';
-import PropTypes from 'prop-types';
+import './index.css';
 
 const initialForm = {
   title: '',

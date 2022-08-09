@@ -4,6 +4,7 @@ import CardGrid from '../../components/Card/CardGrid';
 import Form from '../../components/Form';
 import ModalEditService from '../../components/modal/Modal';
 import Navigation from '../../components/Navigation';
+import Spin from '../../components/Spin';
 import {
   deleteService,
   editService,
@@ -11,10 +12,9 @@ import {
   getServicessuccess
 } from '../../store/actions';
 import { Grid } from '@material-ui/core';
-import './index.css';
 import Swal from 'sweetalert2';
-import Spin from '../../components/Spin';
 import Typography from '@mui/material/Typography';
+import './index.css';
 
 const ServicesPage = () => {
   const dispatch = useDispatch();
