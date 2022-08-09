@@ -13,6 +13,7 @@ import {
 } from '../../store/actions';
 import { Grid, Typography } from '@material-ui/core';
 import './index.css';
+import Swal from 'sweetalert2';
 
 const ServiceHome = () => {
   const dispatch = useDispatch();
@@ -34,7 +35,25 @@ const ServiceHome = () => {
   }, [data]);
 
   const deleteServiceId = id => {
-    dispatch(deleteService(id, data));
+    Swal.fire({
+      title: '¿Quieres eliminar este servicio?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#1976d2',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No'
+    }).then(result => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Servicio eliminado',
+          icon: 'success',
+          timer: 1000,
+          showConfirmButton: false
+        });
+        dispatch(deleteService(id, data));
+      }
+    });
   };
 
   const openModal = service => {

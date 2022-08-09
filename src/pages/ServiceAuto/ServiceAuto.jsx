@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import CardGrid from '../../components/Card/CardGrid';
+import Spin from '../../components/Spin';
+import Form from '../../components/Form';
 import ModalEditService from '../../components/modal/Modal';
 import Navigation from '../../components/Navigation';
 import {
@@ -10,9 +12,8 @@ import {
   getServicessuccess
 } from '../../store/actions';
 import { Grid, Typography } from '@material-ui/core';
-import Spin from '../../components/Spin';
 import './index.css';
-import Form from '../../components/Form';
+import Swal from 'sweetalert2';
 
 const ServiceAuto = () => {
   const dispatch = useDispatch();
@@ -34,7 +35,25 @@ const ServiceAuto = () => {
   }, [data]);
 
   const deleteServiceId = id => {
-    dispatch(deleteService(id, data));
+    Swal.fire({
+      title: '¿Quieres eliminar este servicio?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#1976d2',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No'
+    }).then(result => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Servicio eliminado',
+          icon: 'success',
+          timer: 1000,
+          showConfirmButton: false
+        });
+        dispatch(deleteService(id, data));
+      }
+    });
   };
 
   const openModal = service => {

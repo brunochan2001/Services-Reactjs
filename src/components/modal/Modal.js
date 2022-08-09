@@ -14,6 +14,7 @@ import Divider from '@material-ui/core/Divider';
 import CloseIcon from '@mui/icons-material/Close';
 import CheckIcon from '@mui/icons-material/Check';
 import './index.css';
+import Swal from 'sweetalert2';
 
 const initialForm = {
   title: '',
@@ -43,11 +44,26 @@ const ModalEditService = ({
   const handleSubmit = e => {
     e.preventDefault();
     if (!form.title || !form.description || !form.type) {
-      alert('Datos incompletos');
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Datos Incompletos',
+        showConfirmButton: false,
+        timer: 1000
+      });
       return;
     }
     editServiceSelect(form);
     setOpen(false);
+    setTimeout(() => {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Servicio Editado',
+        showConfirmButton: false,
+        timer: 1000
+      });
+    }, 200);
   };
   return (
     <div>
@@ -60,7 +76,7 @@ const ModalEditService = ({
       >
         <Fade in={open}>
           <Box className="modal-container">
-            <Card style={{ padding: '.5rem' }} className="card-modal">
+            <Card className="card-modal">
               <Typography variant="h6" gutterBottom component="div">
                 Editar Servicio
               </Typography>

@@ -42,16 +42,21 @@ const ServicesPage = () => {
 
   const deleteServiceId = id => {
     Swal.fire({
-      title: '¿Estas Seguro de Eliminar este Servicio?',
+      title: '¿Quieres eliminar este servicio?',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: '#1976d2',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Eliminar',
-      cancelButtonText: 'Cancelar'
+      confirmButtonText: 'Si',
+      cancelButtonText: 'No'
     }).then(result => {
       if (result.isConfirmed) {
-        Swal.fire('Servicio Eliminado', '', 'success');
+        Swal.fire({
+          title: 'Servicio eliminado',
+          icon: 'success',
+          timer: 1000,
+          showConfirmButton: false
+        });
         dispatch(deleteService(id, data));
       }
     });

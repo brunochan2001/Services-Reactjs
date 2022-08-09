@@ -39,7 +39,7 @@ const Form = () => {
       Swal.fire({
         position: 'center',
         icon: 'error',
-        title: 'Complete todos los datos',
+        title: 'Datos Incompletos',
         showConfirmButton: false,
         timer: 1000
       });

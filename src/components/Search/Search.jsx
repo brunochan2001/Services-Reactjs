@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDebounce } from 'react-use';
 import TextField from '@mui/material/TextField';
-import './index.css';
 
 const Search = ({ services, setServicesData }) => {
   const [val, setVal] = useState('');
