@@ -8,7 +8,6 @@ describe('Pruebas en el componente <Form/>', () => {
     description: 'Medicamentos',
     type: 'Salud'
   };
-
   const editServiceSelect = jest.fn();
   const setOpen = jest.fn();
 
@@ -18,7 +17,7 @@ describe('Pruebas en el componente <Form/>', () => {
         open={open}
         setOpen={setOpen}
         serviceSelect={serviceSelect}
-        editServiceSelect={() => {}}
+        editServiceSelect={editServiceSelect}
       />
     );
     const input = screen.getByTestId('input-element');

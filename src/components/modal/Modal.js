@@ -36,7 +36,6 @@ const ModalEditService = ({
       setForm(serviceSelect);
     }
   }, [serviceSelect]);
-
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -170,8 +169,7 @@ const ModalEditService = ({
 ModalEditService.propTypes = {
   open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
-  serviceSelect: PropTypes.object,
   editServiceSelect: PropTypes.func.isRequired
 };
-ModalEditService.defaultProps = { open: false };
+ModalEditService.defaultProps = { open: false, serviceSelect: {} };
 export default ModalEditService;

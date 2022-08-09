@@ -1,8 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ServiceAuto, ServiceHealth, ServiceHome, ServicesPage } from './pages';
-import Error404 from './pages/Error404/Error404';
+import {
+  Error404,
+  ServiceAuto,
+  ServiceHealth,
+  ServiceHome,
+  ServicesPage
+} from './pages';
 import store from './store';
 
 const App = () => {
