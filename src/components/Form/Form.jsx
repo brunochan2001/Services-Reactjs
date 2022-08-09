@@ -90,9 +90,12 @@ const Form = () => {
                   value={form.description}
                   onChange={handleChange}
                   data-testid="textarea-element"
+                  maxLength="150"
                   name="description"
                 ></textarea>
-                <label>Descripcion</label>
+                <div className="counter-container">
+                  <p className="counter">{form.description.length}/150</p>
+                </div>
               </div>
             </FormControl>
           </Grid>

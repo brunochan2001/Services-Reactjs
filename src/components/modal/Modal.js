@@ -89,8 +89,7 @@ const ModalEditService = ({
                   <FormControl fullWidth>
                     <div className="form-floating">
                       <textarea
-                        className="form-control"
-                        placeholder="Leave a comment here"
+                        className="text-area"
                         id="floatingTextarea2"
                         style={{ height: '80px' }}
                         value={form.description}
@@ -98,7 +97,12 @@ const ModalEditService = ({
                         data-testid="textarea-element"
                         name="description"
                       ></textarea>
-                      <label>Descripcion</label>
+                      <div className="counter-container">
+                        <p className="counter">
+                          {form.description ? form.description.length : ''}
+                          /150
+                        </p>
+                      </div>
                     </div>
                   </FormControl>
                 </Grid>

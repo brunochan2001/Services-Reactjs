@@ -11,10 +11,10 @@ textarea:focus {
   display: flex;
 }
 .card-item {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 .card-container {
   margin: auto;
@@ -37,6 +37,13 @@ textarea:focus {
 }
 .stack-container {
   justify-content: center;
+}
+.counter-container {
+  text-align: right;
+  padding-top: 0.5rem;
+}
+.counter {
+  margin: 0;
 }
 @media (min-width: 576px) {
   .form-container {
