@@ -45,7 +45,7 @@ const Navigation = () => {
               </IconButton>
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              <Link to="/" className="appbar-link">
+              <Link to="/Home" className="appbar-link">
                 <Button sx={{ my: 2, color: 'white', display: 'block' }}>
                   Inicio
                 </Button>
@@ -83,7 +83,7 @@ const Navigation = () => {
           >
             <List>
               <ListItem disablePadding>
-                <Link to="/" className="drawer-link">
+                <Link to="/Home" className="drawer-link">
                   <ListItemButton>
                     <ListItemIcon>
                       <HomeIcon></HomeIcon>

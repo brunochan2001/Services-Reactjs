@@ -10,6 +10,7 @@
 .card-container {
   margin: auto;
   height: 100%;
+  padding: 4rem;
   transition: 0.3s;
   box-shadow: 0 16px 70px -12.125px rgba(0, 0, 0, 0.2) !important;
 }
@@ -32,4 +33,9 @@
 }
 .stack-container {
   justify-content: center;
+}
+.pagination {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem 0;
 }

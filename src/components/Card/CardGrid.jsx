@@ -51,11 +51,6 @@ const CardGrid = ({ services, deleteService, editService }) => {
             onChange={handleChange}
             color="primary"
             className="pagination"
-            style={{
-              display: 'flex',
-              flexDirection: 'row-reverse',
-              padding: '1rem 0'
-            }}
           />
         ) : (
           <AlertInfo />

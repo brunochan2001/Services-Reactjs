@@ -8,7 +8,7 @@ const AlertInfo = () => {
     <div className="alert-container">
       <div className="alert">
         <Stack xs={{ width: '100%' }} spacing={2}>
-          <Alert severity="info" style={{ justifyContent: 'center' }}>
+          <Alert severity="info" className="alert-container-text">
             No tienes Servicios
           </Alert>
         </Stack>

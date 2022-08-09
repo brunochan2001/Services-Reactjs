@@ -8,3 +8,6 @@
   right: 0;
   top: 40%;
 }
+.alert-container-text {
+  justify-content: center;
+}

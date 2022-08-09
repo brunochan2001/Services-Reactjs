@@ -47,15 +47,18 @@ const ServiceHealth = () => {
 
   return (
     <>
-      <Navigation></Navigation>
-      <Typography variant="h4" component="div" className="title" gutterBottom>
-        Servicios de Salud
-      </Typography>
-      {loading ? (
-        <Spin></Spin>
-      ) : (
-        <>
-          <main className="main">
+      <header>
+        <Navigation></Navigation>
+      </header>
+
+      <main className="main">
+        <Typography variant="h4" component="div" className="title" gutterBottom>
+          Servicios de Salud
+        </Typography>
+        {loading ? (
+          <Spin></Spin>
+        ) : (
+          <>
             <Grid container spacing={4}>
               <Grid
                 item
@@ -75,9 +78,9 @@ const ServiceHealth = () => {
                 <Form></Form>
               </Grid>
             </Grid>
-          </main>
-        </>
-      )}
+          </>
+        )}
+      </main>
       <ModalEditService
         open={open}
         setOpen={setOpen}

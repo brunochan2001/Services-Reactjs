@@ -60,7 +60,7 @@ const ModalEditService = ({
       >
         <Fade in={open}>
           <Box className="modal-container">
-            <Card className="card-container" style={{ padding: '2rem' }}>
+            <Card style={{ padding: '2rem' }}>
               <Typography variant="h4" gutterBottom component="div">
                 Editar Servicio
               </Typography>
@@ -96,6 +96,7 @@ const ModalEditService = ({
                         onChange={handleChange}
                         data-testid="textarea-element"
                         name="description"
+                        maxLength="150"
                       ></textarea>
                       <div className="counter-container">
                         <p className="counter">

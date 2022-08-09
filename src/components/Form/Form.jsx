@@ -59,11 +59,11 @@ const Form = () => {
 
   return (
     <>
-      <Card className="card-container" style={{ padding: '20px' }}>
+      <Card className="card-container">
         <Typography variant="h5" gutterBottom component="div">
           Registrar Servicio
         </Typography>
-        <Grid item container spacing={1} style={{ justifyContent: 'center' }}>
+        <Grid item container spacing={1}>
           <Grid item xs={12}>
             <FormControl fullWidth>
               <input
@@ -83,10 +83,9 @@ const Form = () => {
             <FormControl fullWidth>
               <div className="form-floating">
                 <textarea
-                  className="form-control"
+                  className="text-area"
                   placeholder="Leave a comment here"
                   id="floatingTextarea2"
-                  style={{ height: '80px' }}
                   value={form.description}
                   onChange={handleChange}
                   data-testid="textarea-element"
