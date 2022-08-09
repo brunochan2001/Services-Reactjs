@@ -7,17 +7,13 @@ import './index.css';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { Grid } from '@material-ui/core';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
-import Select from '@mui/material/Select';
 import AddIcon from '@mui/icons-material/Add';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Card from '@material-ui/core/Card';
 import Divider from '@material-ui/core/Divider';
 import DeleteIcon from '@mui/icons-material/Delete';
+import PropTypes from 'prop-types';
 
 const initialForm = {
   title: '',
@@ -76,45 +72,50 @@ const ModalEditService = ({
               >
                 <Grid item xs={12}>
                   <FormControl fullWidth>
-                    <TextField
-                      label="Nombre"
-                      size="small"
-                      type="Nombre"
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Nombre"
+                      aria-label="Username"
+                      aria-describedby="basic-addon1"
                       onChange={handleChange}
                       name="title"
                       value={form.title}
-                      className="form-input"
+                      data-testid="input-element"
                     />
                   </FormControl>
                 </Grid>
                 <Grid item xs={12}>
                   <FormControl fullWidth>
-                    <TextareaAutosize
-                      aria-label="minimum height"
-                      maxRows={5}
-                      minRows={5}
-                      placeholder="Descripcion"
-                      value={form.description}
-                      onChange={handleChange}
-                      name="description"
-                      className="form-text-area"
-                    />
+                    <div className="form-floating">
+                      <textarea
+                        className="form-control"
+                        placeholder="Leave a comment here"
+                        id="floatingTextarea2"
+                        style={{ height: '80px' }}
+                        value={form.description}
+                        onChange={handleChange}
+                        data-testid="textarea-element"
+                        name="description"
+                      ></textarea>
+                      <label>Descripcion</label>
+                    </div>
                   </FormControl>
                 </Grid>
                 <Grid item xs={12}>
                   <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Tipos</InputLabel>
-                    <Select
-                      labelId="demo-simple-select-label"
-                      label="Tipo"
+                    <select
+                      className="form-select"
                       name="type"
                       onChange={handleChange}
                       value={form.type}
+                      data-testid="select-element"
                     >
-                      <MenuItem value="Auto">Autos</MenuItem>
-                      <MenuItem value="Salud">Salud</MenuItem>
-                      <MenuItem value="Hogar">Hogar</MenuItem>
-                    </Select>
+                      <option value="">Tipos</option>
+                      <option value="Auto">Auto</option>
+                      <option value="Salud">Salud</option>
+                      <option value="Hogar">Hogar</option>
+                    </select>
                   </FormControl>
                 </Grid>
               </Grid>
@@ -124,6 +125,7 @@ const ModalEditService = ({
                   variant="outlined"
                   startIcon={<AddIcon />}
                   onClick={handleSubmit}
+                  data-testid="button-onsubmit-element"
                 >
                   Aceptar
                 </Button>
@@ -131,6 +133,7 @@ const ModalEditService = ({
                   variant="outlined"
                   startIcon={<DeleteIcon />}
                   onClick={() => setOpen(false)}
+                  data-testid="button-hide-modal"
                 >
                   Cancelar
                 </Button>
@@ -143,4 +146,11 @@ const ModalEditService = ({
   );
 };
 
+ModalEditService.propTypes = {
+  open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
+  serviceSelect: PropTypes.object,
+  editServiceSelect: PropTypes.func.isRequired
+};
+ModalEditService.defaultProps = { open: false };
 export default ModalEditService;
