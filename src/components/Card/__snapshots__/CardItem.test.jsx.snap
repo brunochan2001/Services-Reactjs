@@ -4,6 +4,7 @@ exports[`Pruebas en el componente <CardItem/> debe de hacer match con el snapsho
 <div>
   <div
     class="MuiPaper-root MuiCard-root card-container MuiPaper-elevation1 MuiPaper-rounded"
+    style="padding: 0px;"
   >
     <div
       class="MuiCardContent-root card-content"
@@ -22,7 +23,7 @@ exports[`Pruebas en el componente <CardItem/> debe de hacer match con el snapsho
         class="MuiDivider-root card-divider MuiDivider-light"
       />
       <div
-        class="css-o2cger-MuiStack-root"
+        class="stack-container css-o2cger-MuiStack-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
