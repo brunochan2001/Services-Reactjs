@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import CardItem from './CardItem';
-import './index.css';
 import { Grid } from '@material-ui/core';
 import { Pagination } from '@mui/material';
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
 import PropTypes from 'prop-types';
+import AlertInfo from '../alert/alertInfo';
+import './index.css';
 
 const CardGrid = ({ services, deleteService, editService }) => {
   const firstIndex = 0;
@@ -59,15 +58,7 @@ const CardGrid = ({ services, deleteService, editService }) => {
             }}
           />
         ) : (
-          <div className="alert-container">
-            <div className="alert">
-              <Stack xs={{ width: '100%' }} spacing={2}>
-                <Alert severity="info" style={{ justifyContent: 'center' }}>
-                  No tienes Servicios
-                </Alert>
-              </Stack>
-            </div>
-          </div>
+          <AlertInfo />
         )}
       </div>
     </>

@@ -30,16 +30,6 @@
   border: none;
   height: 1px;
 }
-.alert-container {
-  position: relative;
-  min-height: 150px;
-}
-.alert {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 40%;
-}
 .stack-container {
   justify-content: center;
 }
