@@ -12,6 +12,7 @@ import {
 import { Grid, Typography } from '@material-ui/core';
 import Spin from '../../components/Spin';
 import './index.css';
+import Form from '../../components/Form';
 
 const ServiceAuto = () => {
   const dispatch = useDispatch();
@@ -54,17 +55,29 @@ const ServiceAuto = () => {
       {loading ? (
         <Spin></Spin>
       ) : (
-        <main className="main">
-          <Grid container spacing={4}>
-            <Grid item xs={12} sm={12} md={12} lg={12}>
-              <CardGrid
-                services={services}
-                deleteService={deleteServiceId}
-                editService={openModal}
-              />
+        <>
+          <main className="main">
+            <Grid container spacing={4}>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={7}
+                lg={8}
+                style={{ position: 'relative' }}
+              >
+                <CardGrid
+                  services={services}
+                  deleteService={deleteServiceId}
+                  editService={openModal}
+                />
+              </Grid>
+              <Grid item xs={12} md={5} lg={4}>
+                <Form></Form>
+              </Grid>
             </Grid>
-          </Grid>
-        </main>
+          </main>
+        </>
       )}
       <ModalEditService
         open={open}
