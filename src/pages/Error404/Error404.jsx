@@ -15,7 +15,7 @@ const Error404 = () => {
               encuentra!
             </div>
             <div className="error-actions">
-              <Link to="/Home">
+              <Link to="/Inicio">
                 <button className="btn btn-primary btn-lg">
                   <span className="glyphicon glyphicon-home"></span>
                   Ir a Pagina Principal

@@ -84,7 +84,7 @@ const Form = () => {
               <div className="form-floating">
                 <textarea
                   className="text-area"
-                  placeholder="Leave a comment here"
+                  placeholder="Descripcion"
                   id="floatingTextarea2"
                   value={form.description}
                   onChange={handleChange}
