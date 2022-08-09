@@ -16,20 +16,18 @@ import CheckIcon from '@mui/icons-material/Check';
 import './index.css';
 import Swal from 'sweetalert2';
 
-const initialForm = {
-  title: '',
-  type: '',
-  description: '',
-  id: ''
-};
-
 const ModalEditService = ({
   open,
   setOpen,
   serviceSelect,
   editServiceSelect
 }) => {
-  const [form, setForm] = useState(initialForm);
+  const [form, setForm] = useState({
+    title: '',
+    type: '',
+    description: '',
+    id: ''
+  });
 
   useEffect(() => {
     if (serviceSelect) {
