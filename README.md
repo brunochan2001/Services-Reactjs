@@ -2,7 +2,7 @@
 
 Aplicación de React que muestra los servicios
 
-La aplicacion se implemento con vercel y se puede visitar [Click](https://services-reactjs.vercel.app/).
+La aplicacion se implemento con Netlify y se puede visitar [Click](https://services-reactjs.netlify.app/).
 
 [![Service-App-Reactjs](https://i.postimg.cc/BnfKFJ3R/Sin-t-tulo.png)](https://i.postimg.cc/BnfKFJ3R/Sin-t-tulo.png)
 
